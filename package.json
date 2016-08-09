@@ -1,0 +1,25 @@
+{
+  "name": "nolo-chat",
+  "version": "1.0.0",
+  "description": "Real time chat developed with NodeJS, ExpressJS and Socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoschet/nolo-chat.git"
+  },
+  "author": "Leonardo Schettini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leoschet/nolo-chat/issues"
+  },
+  "homepage": "https://github.com/leoschet/nolo-chat#readme",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta4",
+    "socket.io": "^1.4.8"
+  }
+}
