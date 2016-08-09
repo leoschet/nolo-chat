@@ -20,5 +20,19 @@ app.get('/', function(req, res){
 // where .js file with front-end logic are
 app.use(express.static(__dirname + '/public'));
 
-app.listen(port);
+// it pass the ExpressJS server to Socket.io (real time communication)
+var io = require('socket.io').listen(app.listen(port));
+
+// the parameter is the client socket
+io.sockets.on('connection', function(socket) {
+	
+	// send a 'welcome message' when successful connection is made
+	socket.emit('message', { message: 'Welcome to nolo chat' });
+
+	// bind a handler (used as a receiver)
+	socket.on('send', function(data) {
+		io.sockets.emit('message', data);
+	});
+});
+
 console.log('Listening on port ' + port);
