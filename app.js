@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 });
 
 // where .js file with front-end logic are
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/static'));
 
 // it pass the ExpressJS server to Socket.io (real time communication)
 var io = require('socket.io').listen(app.listen(port));
